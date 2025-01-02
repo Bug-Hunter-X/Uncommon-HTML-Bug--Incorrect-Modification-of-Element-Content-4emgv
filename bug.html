@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to select an element by ID and modify its content. This is an uncommon error because people tend to use innerHTML
+    document.getElementById('myDiv').textContent = 'This text is changed.';
+    //correct
+    document.getElementById('myDiv').innerHTML = 'This text is changed.';
+  </script>
+</body>
+</html>
